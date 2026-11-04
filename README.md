@@ -137,6 +137,8 @@ bash install.sh install --platform claude --scenario general
 ./docker/verify.sh unit     # 容器内 npm test
 ```
 
+仓库带 pre-push 门禁：push 前自动在容器内跑 `offline` + `unit`，任一失败即阻止推送。克隆后执行一次 `npm run setup:hooks` 启用。
+
 离线套件使用容器内 fixture 上游缓存，不依赖网络；CI 在 [.github/workflows/ci.yml](.github/workflows/ci.yml) 中并行运行 8 个套件，推送 `v*` tag 时由 [.github/workflows/release.yml](.github/workflows/release.yml) 校验 tag、发布 npm 并推送 GHCR 验证镜像。设计、套件清单与新增方法见 [docker/README.md](docker/README.md)。
 
 ## 收录方式
