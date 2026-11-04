@@ -1,0 +1,11 @@
+# 只保留安装器运行所需内容，减小构建上下文
+.git
+.github
+.gitignore
+node_modules
+npm-debug.log*
+*.log
+.DS_Store
+artifacts
+docker/artifacts
+_templates

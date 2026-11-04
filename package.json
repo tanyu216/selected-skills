@@ -1,0 +1,37 @@
+{
+  "name": "selected-skills",
+  "version": "0.1.0",
+  "description": "Install selected-skills into Claude Code, Codex, pi, opencode, Cursor, Grok, Gemini, OpenClaw and Hermes.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanyu216/selected-skills.git"
+  },
+  "homepage": "https://github.com/tanyu216/selected-skills#readme",
+  "bugs": {
+    "url": "https://github.com/tanyu216/selected-skills/issues"
+  },
+  "bin": {
+    "selected-skills": "tools/bin/selected-skills.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "tools",
+    "!tools/test",
+    "skills",
+    "scenarios",
+    "install.sh",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "test:network": "SKILLS_NETWORK_TESTS=1 node --test",
+    "verify": "bash docker/verify.sh offline",
+    "verify:network": "bash docker/verify.sh network",
+    "verify:unit": "bash docker/verify.sh unit"
+  }
+}

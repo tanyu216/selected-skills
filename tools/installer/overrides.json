@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "entries": {
+    "remotion": {
+      "kind": "framework",
+      "repo": "remotion-dev/remotion",
+      "path": "",
+      "reason": "框架条目；上游 .agents/skills 是维护者贡献工作流，不安装为用户 skill。"
+    },
+    "remotion-video-toolkit": {
+      "kind": "skill",
+      "repo": "shreefentsar/remotion-video-toolkit",
+      "path": "",
+      "root": true,
+      "reason": "仓库根即 skill 目录，含 SKILL.md 与 rules/；默认分支为 master。"
+    },
+    "meerkat-taskpanel": {
+      "kind": "collection",
+      "repo": "tanyu216/meerkat-taskpanel",
+      "paths": ["skills"],
+      "reason": "合集：skills/<name>/ 下共 9 个子 skill。"
+    },
+    "mattpocock-skills": {
+      "kind": "collection",
+      "repo": "mattpocock/skills",
+      "paths": ["skills"],
+      "reason": "合集：skills/<category>/<name>/ 下共 39 个子 skill。"
+    },
+    "awesome-gamedev-agent-skills": {
+      "kind": "collection",
+      "repo": "gamedev-skills/awesome-gamedev-agent-skills",
+      "paths": ["router", "skills"],
+      "reason": "合集：根级 router + skills/<category>/<name>/ 共 78 个子 skill。"
+    },
+    "knowledge-work-plugins-data": {
+      "kind": "collection",
+      "repo": "anthropics/knowledge-work-plugins",
+      "paths": ["data/skills"],
+      "reason": "Anthropic data 插件：data/skills/<name>/ 共 10 个子 skill。"
+    },
+    "claude-trading-skills": {
+      "kind": "collection",
+      "repo": "tradermonty/claude-trading-skills",
+      "paths": ["skills"],
+      "reason": "合集：skills/<name>/ 下共 74 个扁平子 skill。"
+    },
+    "qlib": {
+      "kind": "framework",
+      "repo": "microsoft/qlib",
+      "path": "",
+      "reason": "框架条目：pip install pyqlib；数据准备到 ~/.qlib/qlib_data/。"
+    },
+    "alphalens-reloaded": {
+      "kind": "framework",
+      "repo": "stefan-jansen/alphalens-reloaded",
+      "path": "",
+      "reason": "库条目：pip install alphalens-reloaded。"
+    },
+    "optuna": {
+      "kind": "framework",
+      "repo": "optuna/optuna",
+      "path": "",
+      "reason": "库条目：pip install optuna。"
+    },
+    "tradingagents": {
+      "kind": "framework",
+      "repo": "TauricResearch/TradingAgents",
+      "path": "",
+      "reason": "框架条目：pip install . 或 Docker；需要 LLM provider key。"
+    }
+  }
+}

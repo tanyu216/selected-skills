@@ -1,0 +1,147 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit:
+    name: unit (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Unit tests
+        run: npm test
+      - name: Package dry-run
+        run: npm pack --dry-run
+
+  offline-verify:
+    name: offline / ${{ matrix.suite }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [preflight, dry-run, install, idempotency, link-project, lifecycle, selection, package]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Build verification image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile
+          load: true
+          tags: selected-skills-verify:ci
+          cache-from: type=gha,scope=verify
+          cache-to: type=gha,mode=max,scope=verify
+      - name: Run ${{ matrix.suite }}
+        run: |
+          mkdir -p artifacts
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e SUITE="${{ matrix.suite }}" \
+            -v "$PWD/artifacts:/opt/verify/artifacts" \
+            selected-skills-verify:ci
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-${{ matrix.suite }}
+          path: artifacts/
+          if-no-files-found: ignore
+
+  network-smoke:
+    name: network / ${{ matrix.transport }}
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - transport: git
+            with_git: "true"
+          - transport: tarball
+            with_git: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Build verification image (git=${{ matrix.with_git }})
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile
+          load: true
+          tags: selected-skills-verify:network-${{ matrix.transport }}
+          build-args: |
+            WITH_GIT=${{ matrix.with_git }}
+          cache-from: type=gha,scope=verify
+          cache-to: type=gha,mode=max,scope=verify-network-${{ matrix.transport }}
+      - name: Run real upstream smoke
+        run: |
+          mkdir -p artifacts
+          docker run --rm \
+            --user "$(id -u):$(id -g)" \
+            -e SUITE=network \
+            -v "$PWD/artifacts:/opt/verify/artifacts" \
+            selected-skills-verify:network-${{ matrix.transport }}
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-network-${{ matrix.transport }}
+          path: artifacts/
+          if-no-files-found: ignore
+
+  publish-edge:
+    name: publish edge image
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: [unit, offline-verify]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Compute image name
+        id: image
+        run: echo "name=ghcr.io/$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')/verify" >> "$GITHUB_OUTPUT"
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile
+          push: true
+          tags: |
+            ${{ steps.image.outputs.name }}:edge
+            ${{ steps.image.outputs.name }}:sha-${{ github.sha }}
+          cache-from: type=gha,scope=verify
+          cache-to: type=gha,mode=max,scope=verify

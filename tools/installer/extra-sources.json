@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "sharedPaths": {
+    "anthropics/knowledge-work-plugins": [
+      "data/CONNECTORS.md",
+      "data/README.md",
+      "data/.mcp.json"
+    ]
+  },
+  "sources": {
+    "setup-matt-pocock-skills": { "repo": "mattpocock/skills", "path": "skills/engineering/setup-matt-pocock-skills" },
+    "grill-with-docs": { "repo": "mattpocock/skills", "path": "skills/engineering/grill-with-docs" },
+    "to-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/to-spec" },
+    "to-tickets": { "repo": "mattpocock/skills", "path": "skills/engineering/to-tickets" },
+    "implement-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/implement-spec" },
+    "pr": { "repo": "mattpocock/skills", "path": "skills/engineering/pr" },
+    "ask-matt": { "repo": "mattpocock/skills", "path": "skills/engineering/ask-matt" },
+    "code-review": { "repo": "mattpocock/skills", "path": "skills/engineering/code-review" },
+    "wayfinder": { "repo": "mattpocock/skills", "path": "skills/engineering/wayfinder" },
+    "codebase-design": { "repo": "mattpocock/skills", "path": "skills/engineering/codebase-design" },
+    "improve-codebase-architecture": { "repo": "mattpocock/skills", "path": "skills/engineering/improve-codebase-architecture" },
+    "prototype": { "repo": "mattpocock/skills", "path": "skills/engineering/prototype" },
+    "research": { "repo": "mattpocock/skills", "path": "skills/engineering/research" },
+    "wizard": { "repo": "mattpocock/skills", "path": "skills/engineering/wizard" },
+    "grilling": { "repo": "mattpocock/skills", "path": "skills/productivity/grilling" },
+    "handoff": { "repo": "mattpocock/skills", "path": "skills/productivity/handoff" },
+    "writing-for-agents": { "repo": "mattpocock/skills", "path": "skills/productivity/writing-for-agents" },
+    "claude-handoff": { "repo": "mattpocock/skills", "path": "skills/in-progress/claude-handoff" },
+    "chief-of-staff": { "repo": "mattpocock/skills", "path": "skills/in-progress/chief-of-staff" },
+
+    "setup-meerkat": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/setup-meerkat" },
+    "meerkat": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/meerkat" },
+    "meerkat-chat": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/meerkat-chat" },
+    "meerkat-director": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/meerkat-director" },
+    "jobs": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/jobs" },
+    "linus": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/linus" },
+    "turing": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/turing" },
+    "reviewer": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/reviewer" },
+    "worker": { "repo": "tanyu216/meerkat-taskpanel", "path": "skills/worker" },
+
+    "router": { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "path": "router" },
+    "game-jam": { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "path": "skills/workflows/game-jam" },
+    "prototype-fast": { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "path": "skills/workflows/prototype-fast" },
+    "game-ui-ux": { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "path": "skills/disciplines/game-ui-ux" },
+    "threejs-gltf-loading": { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "path": "skills/web-engines/threejs-gltf-loading" },
+    "create-game-assets": { "repo": "gamedev-skills/awesome-gamedev-agent-skills", "path": "skills/disciplines/create-game-assets" },
+
+    "write-query": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/write-query" },
+    "sql-queries": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/sql-queries" },
+    "explore-data": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/explore-data" },
+    "data-context-extractor": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/data-context-extractor" },
+    "data-visualization": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/data-visualization" },
+    "create-viz": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/create-viz" },
+    "build-dashboard": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/build-dashboard" },
+    "validate-data": { "repo": "anthropics/knowledge-work-plugins", "path": "data/skills/validate-data" },
+
+    "backtest-expert": { "repo": "tradermonty/claude-trading-skills", "path": "skills/backtest-expert" },
+    "manifoldbt-backtester": { "repo": "tradermonty/claude-trading-skills", "path": "skills/manifoldbt-backtester" },
+    "trading-skills-navigator": { "repo": "tradermonty/claude-trading-skills", "path": "skills/trading-skills-navigator" },
+    "market-breadth-analyzer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/market-breadth-analyzer" },
+    "uptrend-analyzer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/uptrend-analyzer" },
+    "exposure-coach": { "repo": "tradermonty/claude-trading-skills", "path": "skills/exposure-coach" },
+    "vcp-screener": { "repo": "tradermonty/claude-trading-skills", "path": "skills/vcp-screener" },
+    "technical-analyst": { "repo": "tradermonty/claude-trading-skills", "path": "skills/technical-analyst" },
+    "position-sizer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/position-sizer" },
+    "pre-trade-discipline-gate": { "repo": "tradermonty/claude-trading-skills", "path": "skills/pre-trade-discipline-gate" },
+    "trader-memory-core": { "repo": "tradermonty/claude-trading-skills", "path": "skills/trader-memory-core" },
+    "signal-postmortem": { "repo": "tradermonty/claude-trading-skills", "path": "skills/signal-postmortem" },
+    "data-quality-checker": { "repo": "tradermonty/claude-trading-skills", "path": "skills/data-quality-checker" }
+  }
+}

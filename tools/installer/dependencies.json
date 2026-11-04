@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "dependencies": {
+    "tavily-cli": {
+      "kind": "uv-tool",
+      "label": "Tavily CLI",
+      "check": ["tvly", "--version"],
+      "install": [["uv", "tool", "install", "tavily-cli"]],
+      "fallbackInstall": [["pipx", "install", "tavily-cli"]],
+      "keys": ["TAVILY_API_KEY"]
+    },
+    "playwright-cli": {
+      "kind": "npm-global",
+      "label": "Playwright CLI",
+      "check": ["playwright-cli", "--version"],
+      "install": [["npm", "install", "-g", "@playwright/cli@latest"]],
+      "postInstallHint": "playwright-cli install --skills",
+      "keys": []
+    },
+    "ocr": {
+      "kind": "npm-global",
+      "label": "Open Code Review CLI",
+      "check": ["ocr", "--version"],
+      "install": [["npm", "install", "-g", "@alibaba-group/open-code-review"]],
+      "keys": ["OCR_LLM_ENDPOINT"]
+    },
+    "hyperframes": {
+      "kind": "npm-global",
+      "label": "HyperFrames CLI",
+      "check": ["hyperframes", "--version"],
+      "install": [["npm", "install", "-g", "hyperframes"]],
+      "keys": []
+    },
+    "remotion": {
+      "kind": "project",
+      "label": "Remotion (project)",
+      "check": ["npx", "--no-install", "remotion", "--version"],
+      "install": [["npm", "install", "remotion", "@remotion/cli"]],
+      "keys": []
+    },
+    "meerkat-taskpanel": {
+      "kind": "npx",
+      "label": "Meerkat TaskPanel",
+      "check": ["taskctl", "--version"],
+      "install": [["npx", "meerkat-taskpanel"]],
+      "interactive": true,
+      "keys": [],
+      "note": "会同时安装 taskctl/taskd，并可能按 primary kind 放置 skill；安装前请确认不会与本次复制重复。"
+    },
+    "qlib": {
+      "kind": "project-pip",
+      "label": "Qlib",
+      "check": ["python", "-c", "import qlib"],
+      "install": [["pip", "install", "pyqlib"]],
+      "keys": []
+    },
+    "alphalens-reloaded": {
+      "kind": "project-pip",
+      "label": "Alphalens Reloaded",
+      "check": ["python", "-c", "import alphalens"],
+      "install": [["pip", "install", "alphalens-reloaded"]],
+      "keys": []
+    },
+    "optuna": {
+      "kind": "project-pip",
+      "label": "Optuna",
+      "check": ["python", "-c", "import optuna"],
+      "install": [["pip", "install", "optuna"]],
+      "keys": []
+    },
+    "tradingagents": {
+      "kind": "manual",
+      "label": "TradingAgents",
+      "check": null,
+      "install": [],
+      "keys": [],
+      "note": "克隆仓库后 pip install .，或 docker compose run --rm tradingagents；需要所选 LLM 提供商的 API key。"
+    }
+  },
+  "skillRequires": {
+    "tavily-search": ["tavily-cli"],
+    "tavily-research": ["tavily-cli"],
+    "tavily-entity": ["tavily-cli"],
+    "tavily-list": ["tavily-cli"],
+    "tavily-monitor": ["tavily-cli"],
+    "playwright-cli": ["playwright-cli"],
+    "open-code-review": ["ocr"],
+    "open-code-review-delegate": ["ocr"],
+    "hyperframes": ["hyperframes"],
+    "hyperframes-cli": ["hyperframes"],
+    "remotion-to-hyperframes": ["hyperframes"],
+    "figma": ["hyperframes"],
+    "media-use": ["hyperframes"],
+    "remotion": ["remotion"],
+    "remotion-video-toolkit": ["remotion"],
+    "frame-smith": ["remotion"],
+    "meerkat-taskpanel": ["meerkat-taskpanel"],
+    "setup-meerkat": ["meerkat-taskpanel"],
+    "meerkat": ["meerkat-taskpanel"],
+    "meerkat-chat": ["meerkat-taskpanel"],
+    "meerkat-director": ["meerkat-taskpanel"],
+    "jobs": ["meerkat-taskpanel"],
+    "linus": ["meerkat-taskpanel"],
+    "turing": ["meerkat-taskpanel"],
+    "reviewer": ["meerkat-taskpanel"],
+    "worker": ["meerkat-taskpanel"],
+    "qlib": ["qlib"],
+    "alphalens-reloaded": ["alphalens-reloaded"],
+    "optuna": ["optuna"],
+    "tradingagents": ["tradingagents"]
+  },
+  "collectionRequires": {
+    "meerkat-taskpanel": ["meerkat-taskpanel"]
+  },
+  "collectionKeyBundles": {
+    "claude-trading-skills": ["FMP_API_KEY", "FINVIZ_API_KEY", "ALPACA_API_KEY", "ALPACA_SECRET_KEY", "ALPACA_PAPER"]
+  },
+  "skillKeyBundles": {
+    "tavily-search": ["TAVILY_API_KEY"],
+    "tavily-research": ["TAVILY_API_KEY"],
+    "tavily-entity": ["TAVILY_API_KEY"],
+    "tavily-list": ["TAVILY_API_KEY"],
+    "tavily-monitor": ["TAVILY_API_KEY"],
+    "open-code-review": ["OCR_LLM_ENDPOINT"],
+    "video-use": ["ELEVENLABS_API_KEY"],
+    "design": ["GEMINI_API_KEY", "ATLAS_CLOUD_API_KEY", "MUAPI_API_KEY"],
+    "figma": ["FIGMA_TOKEN"],
+    "backtest-expert": ["FMP_API_KEY", "FINVIZ_API_KEY", "ALPACA_API_KEY", "ALPACA_SECRET_KEY", "ALPACA_PAPER"],
+    "manifoldbt-backtester": ["FMP_API_KEY"],
+    "trading-skills-navigator": ["FMP_API_KEY", "FINVIZ_API_KEY", "ALPACA_API_KEY", "ALPACA_SECRET_KEY", "ALPACA_PAPER"],
+    "market-breadth-analyzer": [],
+    "uptrend-analyzer": [],
+    "exposure-coach": ["FMP_API_KEY"],
+    "vcp-screener": ["FMP_API_KEY", "FINVIZ_API_KEY"],
+    "technical-analyst": ["FMP_API_KEY"],
+    "position-sizer": [],
+    "pre-trade-discipline-gate": [],
+    "trader-memory-core": [],
+    "signal-postmortem": [],
+    "data-quality-checker": []
+  },
+  "keys": {
+    "TAVILY_API_KEY": {
+      "label": "Tavily API Key",
+      "env": "TAVILY_API_KEY",
+      "required": false,
+      "url": "https://app.tavily.com/home",
+      "check": ["tvly", "--status"],
+      "checkExpect": "Authenticated",
+      "configure": ["tvly", "login", "--api-key", "{key}"],
+      "skipHint": "tvly login --api-key tvly-YOUR_KEY"
+    },
+    "OCR_LLM_ENDPOINT": {
+      "label": "Open Code Review LLM Endpoint",
+      "env": "OCR_LLM_ENDPOINT",
+      "required": false,
+      "configure": null,
+      "skipHint": "export OCR_LLM_ENDPOINT=https://your-llm-endpoint"
+    },
+    "ELEVENLABS_API_KEY": {
+      "label": "ElevenLabs API Key",
+      "env": "ELEVENLABS_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export ELEVENLABS_API_KEY=your_key_here"
+    },
+    "GEMINI_API_KEY": {
+      "label": "Gemini API Key",
+      "env": "GEMINI_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export GEMINI_API_KEY=your_key_here"
+    },
+    "ATLAS_CLOUD_API_KEY": {
+      "label": "Atlas Cloud API Key",
+      "env": "ATLAS_CLOUD_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export ATLAS_CLOUD_API_KEY=your_key_here"
+    },
+    "MUAPI_API_KEY": {
+      "label": "MuAPI API Key",
+      "env": "MUAPI_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export MUAPI_API_KEY=your_key_here"
+    },
+    "FIGMA_TOKEN": {
+      "label": "Figma Token",
+      "env": "FIGMA_TOKEN",
+      "required": false,
+      "configure": null,
+      "skipHint": "export FIGMA_TOKEN=your_token_here"
+    },
+    "FMP_API_KEY": {
+      "label": "Financial Modeling Prep API Key",
+      "env": "FMP_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export FMP_API_KEY=your_key_here"
+    },
+    "FINVIZ_API_KEY": {
+      "label": "FINVIZ API Key (optional)",
+      "env": "FINVIZ_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export FINVIZ_API_KEY=your_key_here"
+    },
+    "ALPACA_API_KEY": {
+      "label": "Alpaca API Key",
+      "env": "ALPACA_API_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export ALPACA_API_KEY=your_key_id"
+    },
+    "ALPACA_SECRET_KEY": {
+      "label": "Alpaca Secret Key",
+      "env": "ALPACA_SECRET_KEY",
+      "required": false,
+      "configure": null,
+      "skipHint": "export ALPACA_SECRET_KEY=your_secret_key"
+    },
+    "ALPACA_PAPER": {
+      "label": "Alpaca Paper Mode",
+      "env": "ALPACA_PAPER",
+      "required": false,
+      "configure": null,
+      "skipHint": "export ALPACA_PAPER=true"
+    }
+  },
+  "frameworkHints": {
+    "remotion": ["npx create-video@latest"],
+    "qlib": ["pip install pyqlib", "把数据放到 ~/.qlib/qlib_data/", "macOS LightGBM 可能需要：brew install libomp"],
+    "alphalens-reloaded": ["pip install alphalens-reloaded", "或：conda install -c ml4t alphalens-reloaded"],
+    "optuna": ["pip install optuna", "可视化面板：pip install optuna-dashboard"],
+    "tradingagents": ["克隆仓库后：pip install .", "或：docker compose run --rm tradingagents", "配置所选 LLM 提供商的 API key"]
+  },
+  "collectionManualHints": {
+    "knowledge-work-plugins-data": [
+      "在 .mcp.json 配置 Snowflake/Databricks/BigQuery 连接器",
+      "data-context-extractor 需要 Python"
+    ],
+    "claude-trading-skills": [
+      "首次使用先跑 trading-skills-navigator 选择工作流并配置 API",
+      "FMP 多为必需，FINVIZ 可选，portfolio-manager 需要 Alpaca"
+    ],
+    "meerkat-taskpanel": [
+      "运行 npx meerkat-taskpanel 安装 taskctl/taskd（会按 primary kind 放置 skill）"
+    ]
+  },
+  "manualHints": {
+    "manim-video": ["uv tool install manim", "安装 ffmpeg", "安装 LaTeX（macOS：brew install --cask mactex-no-gui 或 brew install tectonic）"],
+    "video-use": ["安装 ffmpeg", "配置 ElevenLabs key", "上游 install.md 只打印，不自动执行"],
+    "video-downloader": ["按上游 README/脚本提示安装额外依赖"],
+    "docx": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
+    "pdf": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
+    "pptx": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
+    "xlsx": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
+    "polars": ["uv pip install polars==1.44.2（Python 3.10+）"],
+    "scikit-learn": ["uv pip install scikit-learn==1.9.1（Python 3.11+）"],
+    "statsmodels": ["uv pip install statsmodels==0.15.0（Python 3.10+，测试栈 3.12+）"],
+    "statistical-analysis": ["uv venv --python 3.12 .venv-statistics", "uv pip install pingouin==0.7.0 scipy==1.18.1 statsmodels==0.15.0 pandas matplotlib seaborn"],
+    "exploratory-data-analysis": ["核心 CLI 需 Python 3.11+；完整可选快照需 Python 3.12+ 与 uv"],
+    "setup-matt-pocock-skills": ["安装后首次使用运行该 skill，完成 issue tracker/领域文档布局"],
+    "data-context-extractor": ["需要 Python；完整数仓体验需配置 MCP 连接器"],
+    "knowledge-work-plugins-data": ["在 .mcp.json 配置 Snowflake/Databricks/BigQuery 连接器", "替代安装：claude plugin marketplace add anthropics/knowledge-work-plugins && claude plugin install data@knowledge-work-plugins"],
+    "trading-skills-navigator": ["首次使用先运行本 skill 选择工作流并配置 API", "FMP 多为必需，FINVIZ 可选，portfolio-manager 需要 Alpaca"],
+    "portfolio-manager": ["需要 Alpaca MCP；无 MCP 时可用 alpaca-trade-api + ~/.alpaca/config.ini 降级"],
+    "design": ["Logo/图标生成可选依赖 Gemini、Atlas Cloud 或 MuAPI 的密钥"],
+    "figma": ["需要可访问的 Figma 文件与相应权限"],
+    "media-use": ["部分能力依赖 HeyGen 账号与额度"],
+    "frame-smith": ["运行时二选一：hyperframes 或 remotion，只装一个"]
+  }
+}

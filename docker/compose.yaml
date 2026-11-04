@@ -1,0 +1,31 @@
+# 可选：用 Compose 运行同一套验证环境。
+#   docker compose -f docker/compose.yaml run --rm offline
+#   docker compose -f docker/compose.yaml --profile network run --rm network
+# 注意：Compose 不挂载 artifacts；需要报告时用 ./docker/verify.sh。
+
+x-verify: &verify
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile
+  image: selected-skills-verify:local
+  working_dir: /opt/verify
+  volumes:
+    - ..:/opt/selected-skills:ro
+
+services:
+  offline:
+    <<: *verify
+    environment:
+      SUITE: offline
+
+  network:
+    <<: *verify
+    profiles: ["network"]
+    environment:
+      SUITE: network
+
+  unit:
+    <<: *verify
+    profiles: ["unit"]
+    environment:
+      SUITE: unit
