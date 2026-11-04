@@ -30,6 +30,7 @@
   "scripts": {
     "test": "node --test",
     "test:network": "SKILLS_NETWORK_TESTS=1 node --test",
+    "setup:hooks": "git config core.hooksPath .githooks",
     "verify": "bash docker/verify.sh offline",
     "verify:network": "bash docker/verify.sh network",
     "verify:unit": "bash docker/verify.sh unit"

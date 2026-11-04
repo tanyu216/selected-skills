@@ -62,6 +62,18 @@
 
 提交前运行 `npm test`；改动安装器、`install.sh` 或发布配置时，再运行 `./docker/verify.sh`（离线确定性套件）。
 
+### pre-push 门禁
+
+仓库带一个 pre-push 钩子：推送前自动在容器里跑 `docker/verify.sh offline` 与 `unit`，任一失败即阻止 push。
+
+```bash
+npm run setup:hooks    # 每个 clone 执行一次（git config core.hooksPath .githooks）
+```
+
+- 工作区干净且该提交的 tree 已通过验证时，钩子会命中缓存直接放行；需要强制重跑：`rm .git/selected-skills-verify/pre-push.stamp`
+- 删除分支/标签不触发验证
+- `git push --no-verify` 可绕过，仅用于确认风险的紧急情况
+
 - [ ] 文件名与 slug 一致，未与已有文件重名
 - [ ] 分类在 CONTRIBUTING 的分类表之内
 - [ ] 五个正文小节齐全

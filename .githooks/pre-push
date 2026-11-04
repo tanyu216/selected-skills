@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# 推送门禁：必须通过容器化验证才允许 push。
+#
+# 安装（每个 clone 一次）：npm run setup:hooks
+# 手动执行同一门禁：./.githooks/pre-push < /dev/null
+# 紧急绕过（不建议）：git push --no-verify
+set -uo pipefail
+
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+if [ -z "$ROOT" ]; then
+  exit 0
+fi
+
+if [ ! -x "$ROOT/docker/verify.sh" ]; then
+  echo "[pre-push] 未找到可执行的 docker/verify.sh，无法验证，已阻止推送。" >&2
+  echo "[pre-push]   如确认要跳过：git push --no-verify" >&2
+  exit 1
+fi
+
+# git 通过 stdin 传入：<local ref> <local sha> <remote ref> <remote sha>
+# 全 0 的 local sha 表示删除引用，删除不产生新内容，无需验证。
+has_update=0
+while read -r _local_ref local_sha _remote_ref _remote_sha; do
+  [ -n "${local_sha:-}" ] || continue
+  case "$local_sha" in
+    *[!0]*) has_update=1 ;;
+  esac
+done
+if [ "$has_update" -eq 0 ]; then
+  echo "[pre-push] 仅删除引用，跳过容器验证。"
+  exit 0
+fi
+
+if ! command -v docker >/dev/null 2>&1; then
+  echo "[pre-push] ✗ 未安装 docker，无法执行容器验证，已阻止推送。" >&2
+  echo "[pre-push]   安装 Docker 后重试，或确认风险后用：git push --no-verify" >&2
+  exit 1
+fi
+if ! docker info >/dev/null 2>&1; then
+  echo "[pre-push] ✗ docker daemon 未运行，无法执行容器验证，已阻止推送。" >&2
+  echo "[pre-push]   启动 Docker 后重试，或确认风险后用：git push --no-verify" >&2
+  exit 1
+fi
+
+# 缓存：工作区干净时，用 HEAD 的 tree 作为内容指纹。
+# 同一份内容已通过验证就不再重跑；工作区有改动则照常验证。
+STAMP_DIR="$ROOT/.git/selected-skills-verify"
+STAMP="$STAMP_DIR/pre-push.stamp"
+tree=""
+if [ -z "$(git -C "$ROOT" status --porcelain 2>/dev/null)" ]; then
+  tree="$(git -C "$ROOT" rev-parse 'HEAD^{tree}' 2>/dev/null || true)"
+fi
+if [ -n "$tree" ] && [ -f "$STAMP" ] && [ "$(cat "$STAMP" 2>/dev/null)" = "$tree" ]; then
+  echo "[pre-push] ✓ 内容 ${tree:0:12} 已通过容器验证（缓存命中），跳过重复运行。"
+  echo "[pre-push]   需要强制重跑：rm $STAMP"
+  exit 0
+fi
+
+echo "[pre-push] 运行容器验证，通过后才允许推送……"
+echo
+
+fail() {
+  echo >&2
+  echo "[pre-push] ✗ $1，推送已被阻止。" >&2
+  echo "[pre-push]   报告见 artifacts/（*.log、junit.xml、results.tsv）" >&2
+  echo "[pre-push]   修复后重试；仅在你确认风险时可用 git push --no-verify 绕过。" >&2
+  exit 1
+}
+
+( cd "$ROOT" && ./docker/verify.sh offline ) || fail "离线确定性套件未通过"
+( cd "$ROOT" && SKIP_BUILD=1 ./docker/verify.sh unit ) || fail "容器内单元测试未通过"
+
+if [ -n "$tree" ]; then
+  mkdir -p "$STAMP_DIR" && printf '%s\n' "$tree" > "$STAMP"
+fi
+
+echo
+echo "[pre-push] ✓ 容器验证通过，继续推送。"
