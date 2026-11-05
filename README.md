@@ -44,6 +44,7 @@ selected-skills/
 | frontend | [ui-ux-pro-max](skills/frontend/ui-ux-pro-max.md) | 面向 Web、移动与桌面界面的设计、审查与修复指南，带可检索的本地设计数据。 | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | frontend | [vue](skills/frontend/vue.md) | Vue 3 Composition API、script setup、响应式与内置组件的写法约定。 | [Vue](https://github.com/antfu/skills) |
 | engineering | [antfu](skills/engineering/antfu.md) | Anthony Fu 的 JavaScript / TypeScript 项目工具链、代码组织与发布约定。 | [Antfu](https://github.com/antfu/skills) |
+| engineering | [gitnexus](skills/engineering/gitnexus.md) | 把代码库索引成本地知识图谱的代码智能引擎，用 MCP 与 CLI 查询调用关系、影响面与执行流。 | [GitNexus](https://github.com/abhigyanpatwari/GitNexus) |
 | engineering | [mattpocock-skills](skills/engineering/mattpocock-skills.md) | 39 个工程流程 skill 的合集：规格、拆分、实现、审查、调试与架构。 | [Matt Pocock Skills](https://github.com/mattpocock/skills) |
 | engineering | [open-code-review-delegate](skills/engineering/open-code-review-delegate.md) | OCR 委托模式：宿主 Agent 自己审查，OCR 只做文件选择与规则解析。 | [Open Code Review (Delegate)](https://github.com/alibaba/open-code-review) |
 | engineering | [open-code-review](skills/engineering/open-code-review.md) | 用 ocr CLI 对 Git 变更做 AI 代码审查，输出行级评论并可自动修复。 | [Open Code Review](https://github.com/alibaba/open-code-review) |

@@ -44,6 +44,12 @@
       "paths": ["skills"],
       "reason": "合集：skills/<name>/ 下共 74 个扁平子 skill。"
     },
+    "gitnexus": {
+      "kind": "framework",
+      "repo": "abhigyanpatwari/GitNexus",
+      "path": "",
+      "reason": "CLI + MCP 引擎条目：npx gitnexus analyze 在仓库本地建索引并自行安装 12 个内置 skill。"
+    },
     "qlib": {
       "kind": "framework",
       "repo": "microsoft/qlib",

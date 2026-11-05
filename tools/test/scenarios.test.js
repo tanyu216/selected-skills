@@ -18,10 +18,10 @@ test('there are nine scenarios with skill lists', () => {
   for (const scenario of scenarios) assert.ok(scenario.skills.length > 0, `${scenario.slug} has no skills`);
 });
 
-test('--all selects 103 skills and 5 frameworks, no unresolved items', () => {
+test('--all selects 103 skills and 6 frameworks, no unresolved items', () => {
   const result = selection({ all: true });
   assert.equal(result.selected.filter((spec) => spec.kind === 'skill').length, 103);
-  assert.equal(result.selected.filter((spec) => spec.kind === 'framework').length, 5);
+  assert.equal(result.selected.filter((spec) => spec.kind === 'framework').length, 6);
   assert.equal(result.unresolved.length, 0);
   assert.equal(result.selected.filter((spec) => spec.kind === 'collection').length, 0);
 });

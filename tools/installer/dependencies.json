@@ -229,6 +229,12 @@
     }
   },
   "frameworkHints": {
+    "gitnexus": [
+      "Node.js 22.18+（22.x）或 24.11+",
+      "仓库根目录：npx gitnexus analyze",
+      "npx gitnexus setup 配置编辑器 MCP",
+      "多 Agent：gitnexus mcp --http --port 3111"
+    ],
     "remotion": ["npx create-video@latest"],
     "qlib": ["pip install pyqlib", "把数据放到 ~/.qlib/qlib_data/", "macOS LightGBM 可能需要：brew install libomp"],
     "alphalens-reloaded": ["pip install alphalens-reloaded", "或：conda install -c ml4t alphalens-reloaded"],
