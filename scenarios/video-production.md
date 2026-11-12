@@ -27,7 +27,7 @@ skills: [hyperframes, remotion, video-downloader, video-use, figma, media-use, f
 - 只需要源视频或转写：用 `video-downloader`，先确认平台条款与版权。
 - 只做已有素材的剪辑：用 `video-use`，不要引入生成运行时。
 - 设计资产在 Figma：用 `figma`。
-- 视频目标、受众或时长不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见 WEB开发）。
+- 视频目标、受众或时长不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。
 
 ## 注意事项
 

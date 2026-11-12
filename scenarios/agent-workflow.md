@@ -27,7 +27,7 @@ skills: [setup-meerkat, meerkat, meerkat-chat, meerkat-director, jobs, linus, tu
 - 已经在用 Jira / Linear / Plane：不要并行再建一套卡；Meerkat 的 claim 与候选契约是可替换的，迁移前先确认团队愿意换板。
 - 需要新角色：用 `setup-meerkat` 第 6 步从 role-template 建，不要复制已有角色的正文。
 - 卡片需求本身不清：先用 `grilling` 澄清再建卡，否则验收基线写不出来。
-- 普通 Web 交付流程：见 WEB开发。
+- 普通开发交付流程：见开发。
 
 ## 注意事项
 

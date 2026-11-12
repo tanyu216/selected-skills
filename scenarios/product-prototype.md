@@ -25,11 +25,11 @@ skills: [finesse-term, brand, design, design-taste-frontend, ui-ux-pro-max, desi
 - 后台、仪表盘或 SaaS 工具：以 `interface-design` 为主导，`design-taste-frontend` 只做局部参考。
 - 只想修局部问题：直接从 `impeccable` 开始，不必重做设计方向。
 - 品牌从零开始：先 `design` 产出 Logo / CIP，再进入 `brand` 与设计方向。
-- 要一次性验证设计问题：用 `mattpocock-skills` 的 `prototype`（见 WEB开发）。
-- 要可点击原型或真实截图：用 `playwright-cli`（见 WEB开发）。
-- 组件与样式落地：用 `daisyui` 或 `ui-styling`（见 WEB开发）。
+- 要一次性验证设计问题：用 `mattpocock-skills` 的 `prototype`（见开发）。
+- 要可点击原型或真实截图：用 `playwright-cli`（见前端开发）。
+- 组件与样式落地：用 `daisyui` 或 `ui-styling`（见前端开发）。
 - 用户说不清界面问题：先用 `finesse-term` 或 `finesse-ui` 把描述转成可执行需求。
-- 需求、范围或设计目标不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见 WEB开发）。
+- 需求、范围或设计目标不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。
 
 ## 注意事项
 

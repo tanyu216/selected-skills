@@ -18,7 +18,7 @@ selected-skills/
 │   ├── gamedev/            # 游戏开发（引擎、玩法、资产、发布）
 │   ├── research/           # 搜索、抓取与调研
 │   └── agent/              # 智能体、任务看板与工作流
-├── scenarios/              # 场景手册：9 个一级场景，什么任务该用哪些 skill
+├── scenarios/              # 场景手册：10 个一级场景，什么任务该用哪些 skill
 ├── _templates/             # skill 与 scenario 模板
 ├── tools/                  # 安装器、测试与安装文档（install.sh 为入口）
 ├── CONTRIBUTING.md
@@ -45,7 +45,7 @@ selected-skills/
 | frontend | [vue](skills/frontend/vue.md) | Vue 3 Composition API、script setup、响应式与内置组件的写法约定。 | [Vue](https://github.com/antfu/skills) |
 | engineering | [antfu](skills/engineering/antfu.md) | Anthony Fu 的 JavaScript / TypeScript 项目工具链、代码组织与发布约定。 | [Antfu](https://github.com/antfu/skills) |
 | engineering | [gitnexus](skills/engineering/gitnexus.md) | 把代码库索引成本地知识图谱的代码智能引擎，用 MCP 与 CLI 查询调用关系、影响面与执行流。 | [GitNexus](https://github.com/abhigyanpatwari/GitNexus) |
-| engineering | [mattpocock-skills](skills/engineering/mattpocock-skills.md) | 39 个工程流程 skill 的合集：规格、拆分、实现、审查、调试与架构。 | [Matt Pocock Skills](https://github.com/mattpocock/skills) |
+| engineering | [mattpocock-skills](skills/engineering/mattpocock-skills.md) | 推荐的 16 个工程流程 skill：规格、拆分、实现、调试与交接。 | [Matt Pocock Skills](https://github.com/mattpocock/skills) |
 | engineering | [open-code-review-delegate](skills/engineering/open-code-review-delegate.md) | OCR 委托模式：宿主 Agent 自己审查，OCR 只做文件选择与规则解析。 | [Open Code Review (Delegate)](https://github.com/alibaba/open-code-review) |
 | engineering | [open-code-review](skills/engineering/open-code-review.md) | 用 ocr CLI 对 Git 变更做 AI 代码审查，输出行级评论并可自动修复。 | [Open Code Review](https://github.com/alibaba/open-code-review) |
 | engineering | [playwright-cli](skills/engineering/playwright-cli.md) | 用 playwright-cli 做浏览器自动化、网页测试与 Playwright 测试。 | [Playwright CLI](https://github.com/microsoft/playwright-cli) |
@@ -99,7 +99,8 @@ selected-skills/
 | --- | --- | --- |
 | [通用场景（文档处理、搜索）](scenarios/general.md) | 交付办公文档，或带引用的调研结论 | pdf · docx · pptx · xlsx · tavily-search · tavily-research |
 | [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可交付实现的页面原型 | brand · design-taste-frontend · ui-ux-pro-max · design-system · finesse-ui · impeccable |
-| [WEB开发](scenarios/web-development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · to-spec · to-tickets · implement-spec · code-review · vue/nuxt · vite · vitest · playwright-cli |
+| [前端开发](scenarios/frontend-development.md) | 可交付的前端界面：框架、组件、样式与视觉打磨 | finesse-term · vue/nuxt · vite · daisyui/ui-styling · finesse-ui · impeccable · vitest · playwright-cli |
+| [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement-spec · code-review · vitest · open-code-review |
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
 | [视频制作](scenarios/video-production.md) | 可交付的成片或竖屏短视频 | hyperframes · remotion · frame-smith · media-use · video-use |
 | [数据分析（清洗、统计、可视化）](scenarios/data-analysis.md) | 数据清洗、统计分析、可视化与交付校验 | tavily-search · tavily-research · xlsx · polars · exploratory-data-analysis · statistical-analysis · data-visualization |

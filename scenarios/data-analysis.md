@@ -28,7 +28,7 @@ skills: [tavily-search, tavily-research, tavily-list, xlsx, polars, exploratory-
 - 团队口径复杂、每次都要重复解释表名与指标：用 `data-context-extractor` 生成公司专属 skill。
 - 需要解释模型预测：先用 `scikit-learn` 建模，再评估同源上游的 `shap`（本次未单独收录）。
 - 要统计检验与 APA 报告：用 `statistical-analysis`；只要拟合系数与时序模型：用 `statsmodels`。
-- 分析目标、口径或数据范围不清：用 `grilling` 做压力测试（主流程见 WEB开发）。
+- 分析目标、口径或数据范围不清：用 `grilling` 做压力测试（主流程见开发）。
 - 因子分析、回测与交易流程：转「量化研究场景」。
 
 ## 注意事项

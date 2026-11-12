@@ -19,7 +19,7 @@ skills: [writing-for-agents, grilling]
 - 只想给现有 skill 补文档：直接改 `skills/<category>/<slug>.md`。
 - 要新增 skill：按 CONTRIBUTING 的新增流程。
 - 要安装外部 skill 包：暂无本地 skill。
-- skill 的用途、边界或触发方式不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见 WEB开发）。
+- skill 的用途、边界或触发方式不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。
 
 ## 注意事项
 

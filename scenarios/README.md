@@ -2,13 +2,14 @@
 
 场景回答「遇到这件事，该用哪些 skill、按什么顺序」，而不是「某个 skill 有什么功能」。
 
-场景固定为 9 个一级场景，只有一层，不建子场景：
+场景固定为 10 个一级场景，只有一层，不建子场景：
 
 | 场景 | 文件 | 解决什么 |
 | --- | --- | --- |
 | 通用场景（文档处理、搜索） | [general.md](general.md) | 办公文档、联网检索与调研 |
 | 产品原型设计（网页设计） | [product-prototype.md](product-prototype.md) | 视觉方向、设计系统、可评审原型 |
-| WEB开发 | [web-development.md](web-development.md) | 框架、构建、组件、测试、审查 |
+| 前端开发 | [frontend-development.md](frontend-development.md) | 框架、构建、组件、样式与前端打磨 |
+| 开发 | [development.md](development.md) | spec、tickets、实现流程、测试与审查 |
 | 游戏开发 | [game-development.md](game-development.md) | 浏览器游戏与游戏引擎路线 |
 | 视频制作 | [video-production.md](video-production.md) | 代码生成、剪辑、动效与数学动画 |
 | 数据分析（清洗、统计、可视化） | [data-analysis.md](data-analysis.md) | 数据清洗、统计分析、可视化与交付校验 |

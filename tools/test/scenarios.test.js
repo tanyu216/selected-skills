@@ -12,9 +12,9 @@ function selection(options) {
   return buildSelection({ includeCollections: false, ...options }, helpers);
 }
 
-test('there are nine scenarios with skill lists', () => {
+test('there are ten scenarios with skill lists', () => {
   const scenarios = loadScenarios();
-  assert.equal(scenarios.length, 9);
+  assert.equal(scenarios.length, 10);
   for (const scenario of scenarios) assert.ok(scenario.skills.length > 0, `${scenario.slug} has no skills`);
 });
 
@@ -30,7 +30,8 @@ test('scenario counts resolve completely', () => {
   const expectations = {
     'data-analysis': 18,
     quant: 20,
-    'web-development': 22,
+    'frontend-development': 15,
+    development: 17,
     'agent-workflow': 13,
     'video-production': 11,
     general: 12,

@@ -26,8 +26,8 @@ skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, cre
 - 已有现成 GLB 资产：用 `threejs-gltf-loading` 直接加载，不必走生成。
 - 需要生成 3D 资产：`threejs-3d-generator` 已从本目录移除（依赖付费 Tripo API）；回上游使用，或按 `create-game-assets` 规划后接外部生成服务。
 - 需要静态部署：按 `threejs-qa-release` 的生产构建与静态托管步骤处理。
-- 需要单元测试：用 `vitest`（见 WEB开发）。
-- 玩法、范围或目标平台不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见 WEB开发）。
+- 需要单元测试：用 `vitest`（见开发）。
+- 玩法、范围或目标平台不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。
 
 ## 注意事项
 

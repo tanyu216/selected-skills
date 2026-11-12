@@ -22,10 +22,10 @@ skills: [pdf, docx, pptx, xlsx, tavily-search, tavily-research, tavily-list, tav
 - 需要候选清单或去重表：用 `tavily-list`，并在表里标明「搜索结果而非全集」。
 - 已知公司、人物或组织，要补 CRM 字段或已有 CSV：用 `tavily-entity`。
 - 周期性跟踪同一主题的变化：用 `tavily-monitor`，用 `max_age_hours` 控制间隔并保存基线。
-- 要把调研落成仓库内的 Markdown 笔记：用 `mattpocock-skills` 的 `research`（见 WEB开发）。
+- 要把调研落成仓库内的 Markdown 笔记：用 `mattpocock-skills` 的 `research`（见开发）。
 - 要做 HTML 幻灯片：用 `design-system` 的幻灯片能力（见产品原型设计）。
 - 纯数据分析或多维可视化：见数据分析场景；因子研究与回测见量化研究场景。
-- 需求、范围或输出格式不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见 WEB开发）。
+- 需求、范围或输出格式不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。
 
 ## 注意事项
 
