@@ -64,7 +64,7 @@ selected-skills install --platform claude --scenario data-analysis,quant
 # 按分类
 selected-skills install --platform claude --category data,quant
 
-# 全部可独立安装的 skill（当前 104 个）
+# 全部可独立安装的 skill（当前 100 个）
 selected-skills install --platform claude --all --yes
 
 # 精确指定

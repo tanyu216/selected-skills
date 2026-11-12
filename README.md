@@ -37,11 +37,8 @@ selected-skills/
 | frontend | [design](skills/frontend/design.md) | 品牌识别、Logo、CIP、图标、海报与社交图的综合设计流程。 | [Design (ui-ux-pro-max)](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | frontend | [finesse-term](skills/frontend/finesse-term.md) | 把用户口语化的 Web / H5 描述翻译成准确术语和可执行需求。 | [Finesse Term](https://github.com/mouse-lin/finesse-term) |
 | frontend | [finesse-ui](skills/frontend/finesse-ui.md) | 构建和打磨高完成度 Web 界面，含视觉、无障碍与动效审计。 | [Finesse UI](https://github.com/mouse-lin/finesse-skill) |
-| frontend | [impeccable](skills/frontend/impeccable.md) | 前端界面的设计、审查、打磨、简化、硬化与动效改进。 | [Impeccable](https://github.com/pbakaus/impeccable) |
 | frontend | [interface-design](skills/frontend/interface-design.md) | 面向仪表盘、后台、SaaS 工具与数据界面的 craft-first 设计。 | [Interface Design](https://github.com/Dammyjay93/interface-design) |
 | frontend | [nuxt](skills/frontend/nuxt.md) | Nuxt 全栈框架的 SSR、自动导入、文件路由与服务端路由用法。 | [Nuxt](https://github.com/antfu/skills) |
-| frontend | [ui-styling](skills/frontend/ui-styling.md) | 用 shadcn/ui、Tailwind 与 canvas 构建可访问的响应式界面。 | [UI Styling](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
-| frontend | [ui-ux-pro-max](skills/frontend/ui-ux-pro-max.md) | 面向 Web、移动与桌面界面的设计、审查与修复指南，带可检索的本地设计数据。 | [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | frontend | [vue](skills/frontend/vue.md) | Vue 3 Composition API、script setup、响应式与内置组件的写法约定。 | [Vue](https://github.com/antfu/skills) |
 | engineering | [antfu](skills/engineering/antfu.md) | Anthony Fu 的 JavaScript / TypeScript 项目工具链、代码组织与发布约定。 | [Antfu](https://github.com/antfu/skills) |
 | engineering | [gitnexus](skills/engineering/gitnexus.md) | 把代码库索引成本地知识图谱的代码智能引擎，用 MCP 与 CLI 查询调用关系、影响面与执行流。 | [GitNexus](https://github.com/abhigyanpatwari/GitNexus) |
@@ -98,9 +95,9 @@ selected-skills/
 | 场景 | 目标 | 主要 skill |
 | --- | --- | --- |
 | [通用场景（文档处理、搜索）](scenarios/general.md) | 交付办公文档，或带引用的调研结论 | pdf · docx · pptx · xlsx · tavily-search · tavily-research |
-| [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可交付实现的页面原型 | brand · design-taste-frontend · ui-ux-pro-max · design-system · finesse-ui · impeccable |
-| [前端开发](scenarios/frontend-development.md) | 可交付的前端界面：框架、组件、样式与视觉打磨 | finesse-term · vue/nuxt · vite · daisyui/ui-styling · finesse-ui · impeccable · vitest · playwright-cli |
-| [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement/implement-spec · code-review · vitest · open-code-review |
+| [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可直接进入实现的设计交付物 | grilling · finesse-term · brand · design-taste-frontend/interface-design · design-system · finesse-ui · prototype · playwright-cli |
+| [前端开发](scenarios/frontend-development.md) | 按设计交付物落地的工程实现与测试 | vue/nuxt · vite · daisyui · vitest · playwright-cli |
+| [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement/implement-spec · vitest · open-code-review |
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
 | [视频制作](scenarios/video-production.md) | 可交付的成片或竖屏短视频 | hyperframes · remotion · frame-smith · media-use · video-use |
 | [数据分析（清洗、统计、可视化）](scenarios/data-analysis.md) | 数据清洗、统计分析、可视化与交付校验 | tavily-search · tavily-research · xlsx · polars · exploratory-data-analysis · statistical-analysis · data-visualization |

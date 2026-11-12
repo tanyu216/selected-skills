@@ -16,7 +16,7 @@ summary: daisyUI 组件类、语义色与主题在 Tailwind CSS 中的用法。
 ## 适用 / 不适用
 
 - **适用**：使用 Tailwind CSS + daisyUI 的项目；需要按钮、表单、导航、弹窗、表格等现成组件类；需要主题切换。
-- **不适用**：不用 Tailwind 的项目；需要完全自定义的无障碍组件（用 `ui-styling` 的 shadcn/ui 方案）。
+- **不适用**：不用 Tailwind 的项目；需要完全自定义的无障碍组件（自行实现或选其他组件库）。
 
 ## 典型场景
 

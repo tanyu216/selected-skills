@@ -1,6 +1,6 @@
 ---
 title: 开发
-skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to-tickets, implement, implement-spec, pr, ask-matt, grilling, code-review, wayfinder, codebase-design, improve-codebase-architecture, vitest, playwright-cli, open-code-review, open-code-review-delegate]
+skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to-tickets, implement, implement-spec, pr, ask-matt, grilling, wayfinder, codebase-design, improve-codebase-architecture, vitest, playwright-cli, open-code-review, open-code-review-delegate]
 ---
 
 # 开发
@@ -28,7 +28,6 @@ skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to
 - 不知道从哪开始：用 `mattpocock-skills` 的 `ask-matt`，按当前处境推荐流程。
 - 只做页面、组件与样式：直接用前端开发，不必走完整交付流程。
 - 没有可用的 LLM endpoint 或合规限制：用 `open-code-review-delegate`，由宿主模型自己审查。
-- 要 spec 感知审查：用 `mattpocock-skills` 的 `code-review`，与 OCR 二选一，避免重复评论。
 - 需求本身不清楚：用 `mattpocock-skills` 的 `grilling` 做压力测试。
 - 工作量超过一个会话：用 `wayfinder` 替代 `to-tickets`，把工作铺成决策地图。
 - 问题在架构而不是实现：用 `codebase-design` 或 `improve-codebase-architecture`。
@@ -39,6 +38,5 @@ skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to
 - 第一次使用前跑一次 `setup-matt-pocock-skills`。
 - `gitnexus` 的索引是快照，改完代码先 `gitnexus analyze` 再查影响面，否则图结论会过期。
 - `to-spec` 之前不要跳过澄清，否则拆出来的 ticket 是空的。
-- `open-code-review` 与 `mattpocock-skills` 的 `code-review` 不要同时开。
-- 前端框架约定、组件库与视觉打磨不在本场景展开，统一见前端开发。
+- 前端框架约定与组件库不在本场景展开，见前端开发；视觉与交互设计见产品原型设计。
 - Playwright 首次使用先跑安装并装好浏览器。

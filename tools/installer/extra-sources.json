@@ -16,7 +16,6 @@
     "implement-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/implement-spec" },
     "pr": { "repo": "mattpocock/skills", "path": "skills/engineering/pr" },
     "ask-matt": { "repo": "mattpocock/skills", "path": "skills/engineering/ask-matt" },
-    "code-review": { "repo": "mattpocock/skills", "path": "skills/engineering/code-review" },
     "wayfinder": { "repo": "mattpocock/skills", "path": "skills/engineering/wayfinder" },
     "codebase-design": { "repo": "mattpocock/skills", "path": "skills/engineering/codebase-design" },
     "improve-codebase-architecture": { "repo": "mattpocock/skills", "path": "skills/engineering/improve-codebase-architecture" },

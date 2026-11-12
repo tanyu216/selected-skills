@@ -16,7 +16,7 @@ summary: 品牌识别、Logo、CIP、图标、海报与社交图的综合设计�
 ## 适用 / 不适用
 
 - **适用**：需要成套品牌物料或营销视觉；从 Logo、CIP 到社交图一次做完；需要快速产出可交付的 mockup。
-- **不适用**：只需要产品界面（用 `ui-ux-pro-max` 或 `interface-design`）；只需要设计 token（用 `design-system`）。
+- **不适用**：只需要产品界面（用 `interface-design`）；只需要设计 token（用 `design-system`）。
 
 ## 典型场景
 
