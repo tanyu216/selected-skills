@@ -100,7 +100,7 @@ selected-skills/
 | [通用场景（文档处理、搜索）](scenarios/general.md) | 交付办公文档，或带引用的调研结论 | pdf · docx · pptx · xlsx · tavily-search · tavily-research |
 | [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可交付实现的页面原型 | brand · design-taste-frontend · ui-ux-pro-max · design-system · finesse-ui · impeccable |
 | [前端开发](scenarios/frontend-development.md) | 可交付的前端界面：框架、组件、样式与视觉打磨 | finesse-term · vue/nuxt · vite · daisyui/ui-styling · finesse-ui · impeccable · vitest · playwright-cli |
-| [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement-spec · code-review · vitest · open-code-review |
+| [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement/implement-spec · code-review · vitest · open-code-review |
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
 | [视频制作](scenarios/video-production.md) | 可交付的成片或竖屏短视频 | hyperframes · remotion · frame-smith · media-use · video-use |
 | [数据分析（清洗、统计、可视化）](scenarios/data-analysis.md) | 数据清洗、统计分析、可视化与交付校验 | tavily-search · tavily-research · xlsx · polars · exploratory-data-analysis · statistical-analysis · data-visualization |

@@ -114,7 +114,7 @@ scenarios/*.md (frontmatter.skills) ──buildSelection()──► selected spe
 2. 来源只指向默认分支/HEAD，不写 commit 或版本号；无法确认的许可证写 `unknown`，非 OSI 的写 `source-available`，不要冒充 MIT。
 3. 更新 [README.md](README.md) 的 Skill 索引，并把新 skill 补进至少一个已有场景的 `skills:` 列表。场景固定 10 个，不新增场景文件。
 4. 如果正文地址不能被 `sources.js` 解析，补 [tools/installer/overrides.json](tools/installer/overrides.json)；如果这个 skill 只在场景里引用、没有单独卡片，补 `extra-sources.json`。
-5. 改完数量后更新硬编码断言：[tools/test/scenarios.test.js](tools/test/scenarios.test.js) 中 `--all` 的 103 skills / 6 frameworks，以及各场景的 skill 计数；同时更新 [tools/docs/INSTALL.md](tools/docs/INSTALL.md) 里的「当前 103 个」。来源解析与 `extra-sources.json` 的完整性由 `sources.test.js` 约束。
+5. 改完数量后更新硬编码断言：[tools/test/scenarios.test.js](tools/test/scenarios.test.js) 中 `--all` 的 104 skills / 6 frameworks，以及各场景的 skill 计数；同时更新 [tools/docs/INSTALL.md](tools/docs/INSTALL.md) 里的「当前 104 个」。来源解析与 `extra-sources.json` 的完整性由 `sources.test.js` 约束。
 
 ### 卡片收录规则（CONTRIBUTING）
 

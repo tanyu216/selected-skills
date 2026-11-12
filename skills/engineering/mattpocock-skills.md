@@ -4,20 +4,20 @@ category: engineering
 source: https://github.com/mattpocock/skills
 license: MIT
 tags: [workflow, engineering, collection]
-summary: 推荐的 16 个工程流程 skill：规格、拆分、实现、调试与交接。
+summary: 推荐的 17 个工程流程 skill：规格、拆分、实现、调试与交接。
 ---
 
 # Matt Pocock Skills
 
 ## 用途
 
-一套围绕「规格 → 拆分 → 实现 → 交付」组织的工程工作流。上游共 39 个 skill，本条目只收录推荐的 16 个（首选 5 个、常用 7 个、通用 1 个、按需 3 个）；`in-progress`、`misc` 与其余特定场景 skill 不逐一收录。
+一套围绕「规格 → 拆分 → 实现 → 交付」组织的工程工作流。上游共 39 个 skill，本条目只收录推荐的 17 个（首选 4 个、常用 8 个、通用 1 个、按需 4 个）；`in-progress`、`misc` 与其余特定场景 skill 不逐一收录。
 
 多数 skill 依赖仓库里配置好的 issue tracker 与领域文档布局，因此第一次使用前要先跑 `setup-matt-pocock-skills`。
 
 推荐标记：`首选` = 第一次使用先读或先跑；`常用` = 高频；`通用` = 所有场景都适用；`按需` = 特定任务才用。
 
-### engineering（14）
+### engineering（15）
 
 | 子 skill | 用途 | 推荐 |
 | --- | --- | --- |
@@ -25,7 +25,8 @@ summary: 推荐的 16 个工程流程 skill：规格、拆分、实现、调试�
 | `ask-matt` | 按当前处境推荐该用哪个 skill 或流程。 | 首选 |
 | `to-spec` | 把当前对话综合成 spec 并发布到 tracker，不做二次访谈。 | 首选 |
 | `to-tickets` | 把计划或 spec 拆成带阻塞边的 tracer-bullet tickets。 | 首选 |
-| `implement-spec` | 实现 `/to-spec` 与 `/to-tickets` 的产物。 | 首选 |
+| `implement` | 按 spec 或 tickets 实现一块工作；逐 ticket 时每次清空上下文。 | 常用 |
+| `implement-spec` | 把整份 spec 与 tickets 当任务图，用并行子 Agent 落到一条集成分支。 | 按需 |
 | `tdd` | 测试先行的红-绿-重构流程。 | 常用 |
 | `diagnosing-bugs` | 难 bug 与性能回归的诊断循环。 | 常用 |
 | `grill-with-docs` | 追问式打磨计划或设计，同时产出 ADR 与术语表。 | 常用 |
@@ -63,6 +64,7 @@ summary: 推荐的 16 个工程流程 skill：规格、拆分、实现、调试�
 - 整包安装会带入上游全部子 skill；只需要推荐集时按上表名称逐个安装。
 - 未收录的 `in-progress` skill 接口可能变化；不要在流程里硬依赖。
 - 本条目不收录 `code-review`；代码审查用 `open-code-review` 或 `open-code-review-delegate`。
+- `implement` 用于逐 ticket 或小改动；`implement-spec` 用于整包并行编排，二者不要同时开。
 - 插件安装与 skills.sh 复制二选一，同时装会出现重复 skill。
 
 ## 来源

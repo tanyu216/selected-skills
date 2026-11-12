@@ -1,6 +1,6 @@
 ---
 title: 开发
-skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to-tickets, implement-spec, pr, ask-matt, grilling, code-review, wayfinder, codebase-design, improve-codebase-architecture, vitest, playwright-cli, open-code-review, open-code-review-delegate]
+skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to-tickets, implement, implement-spec, pr, ask-matt, grilling, code-review, wayfinder, codebase-design, improve-codebase-architecture, vitest, playwright-cli, open-code-review, open-code-review-delegate]
 ---
 
 # 开发
@@ -13,7 +13,7 @@ skills: [antfu, gitnexus, setup-matt-pocock-skills, grill-with-docs, to-spec, to
 
 1. `antfu` —— 新项目先定工具链与代码组织：pnpm、monorepo、lint、库发布。
 2. `gitnexus` —— 接手陌生仓库或改公共接口前先建索引，用 impact / trace 看清影响面与调用链。
-3. `mattpocock-skills` —— 按 `setup-matt-pocock-skills` → `grill-with-docs` → `to-spec` → `to-tickets` → `implement-spec` 推进。
+3. `mattpocock-skills` —— 按 `setup-matt-pocock-skills` → `grill-with-docs` → `to-spec` → `to-tickets` → `implement` 推进；逐 ticket 实现时每次清空上下文，需要整包并行编排时改用 `implement-spec`。
 4. 前端实现 —— 框架、构建、组件与样式按前端开发的流程执行。
 5. `vitest` —— 为改动补单元/集成测试，处理 mock 与覆盖率。
 6. `playwright-cli` —— 真浏览器 E2E、关键路径回归与响应式验证。

@@ -12,6 +12,7 @@
     "grill-with-docs": { "repo": "mattpocock/skills", "path": "skills/engineering/grill-with-docs" },
     "to-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/to-spec" },
     "to-tickets": { "repo": "mattpocock/skills", "path": "skills/engineering/to-tickets" },
+    "implement": { "repo": "mattpocock/skills", "path": "skills/engineering/implement" },
     "implement-spec": { "repo": "mattpocock/skills", "path": "skills/engineering/implement-spec" },
     "pr": { "repo": "mattpocock/skills", "path": "skills/engineering/pr" },
     "ask-matt": { "repo": "mattpocock/skills", "path": "skills/engineering/ask-matt" },
