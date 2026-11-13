@@ -64,6 +64,7 @@ selected-skills/
 | quant | [qlib](skills/quant/qlib.md) | 面向 AI 的量化投资框架：数据、因子、模型、回测、组合优化与自动研究流水线。 | [Qlib](https://github.com/microsoft/qlib) |
 | quant | [tradingagents](skills/quant/tradingagents.md) | 多 Agent LLM 交易研究框架：分析师、研究员、交易员、风控与组合经理协作决策。 | [TradingAgents](https://github.com/TauricResearch/TradingAgents) |
 | creative | [brand](skills/creative/brand.md) | 品牌语调、视觉识别、信息框架与品牌一致性。 | [Brand (ui-ux-pro-max)](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+| creative | [canvas-design](skills/creative/canvas-design.md) | 先发明一套设计哲学，再产出博物馆级原创静态视觉作品（PNG / PDF）。 | [Canvas Design](https://github.com/anthropics/skills) |
 | creative | [figma](skills/creative/figma.md) | 把 Figma 资源、品牌 token、组件与 storyboard 带进 HyperFrames 视频。 | [Figma](https://github.com/heygen-com/hyperframes) |
 | creative | [frame-smith](skills/creative/frame-smith.md) | 以 Remotion 或 HyperFrames 为运行时的宣传片与竖屏短视频导演 skill。 | [Frame Smith](https://github.com/mouse-lin/frame-smith) |
 | creative | [hyperframes-cli](skills/creative/hyperframes-cli.md) | HyperFrames 的命令行工作流：脚手架、检查、预览、渲染、发布与故障恢复。 | [HyperFrames CLI](https://github.com/heygen-com/hyperframes) |
@@ -87,6 +88,7 @@ selected-skills/
 | research | [tavily-research](skills/research/tavily-research.md) | 多来源综合的深度研究报告，输出带引用的报告。 | [Tavily Research](https://github.com/tavily-ai/skills) |
 | research | [tavily-search](skills/research/tavily-search.md) | 用 Tavily 做面向 LLM 的网页搜索，并覆盖提取、站点地图与抓取。 | [Tavily Search](https://github.com/tavily-ai/skills) |
 | agent | [meerkat-taskpanel](skills/agent/meerkat-taskpanel.md) | 面向 AI Agent 团队的本机任务看板：卡片流转、交付报告、独立审查与 supervisor 调度。 | [Meerkat TaskPanel](https://github.com/tanyu216/meerkat-taskpanel) |
+| agent | [skill-creator](skills/agent/skill-creator.md) | 创建、评测、迭代优化并打包 skill 的元 skill。 | [Skill Creator](https://github.com/anthropics/skills) |
 
 ## 场景
 
@@ -95,7 +97,7 @@ selected-skills/
 | 场景 | 目标 | 主要 skill |
 | --- | --- | --- |
 | [通用场景（文档处理、搜索）](scenarios/general.md) | 交付办公文档，或带引用的调研结论 | pdf · docx · pptx · xlsx · tavily-search · tavily-research |
-| [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可直接进入实现的设计交付物 | grilling · finesse-term · brand · design-taste-frontend/interface-design · design-system · finesse-ui · prototype · playwright-cli |
+| [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可直接进入实现的设计交付物 | grilling · finesse-term · brand · canvas-design · design-taste-frontend/interface-design · design-system · finesse-ui · prototype · playwright-cli |
 | [前端开发](scenarios/frontend-development.md) | 按设计交付物落地的工程实现与测试 | vue/nuxt · vite · daisyui · vitest · playwright-cli |
 | [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement/implement-spec · vitest · open-code-review |
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
@@ -103,7 +105,7 @@ selected-skills/
 | [数据分析（清洗、统计、可视化）](scenarios/data-analysis.md) | 数据清洗、统计分析、可视化与交付校验 | tavily-search · tavily-research · xlsx · polars · exploratory-data-analysis · statistical-analysis · data-visualization |
 | [量化研究（因子、回测、交易流程）](scenarios/quant.md) | 因子研究、策略回测、组合与交易流程 | qlib · alphalens-reloaded · optuna · backtest-expert · manifoldbt-backtester · tradingagents · trading-skills-navigator · vcp-screener |
 | [智能体场景（任务看板、工作流）](scenarios/agent-workflow.md) | 智能体协作、任务看板与交接 | setup-meerkat · meerkat · jobs/linus/turing · reviewer · meerkat-chat · handoff |
-| [其他/专业场景](scenarios/specialized.md) | meta：skill 创建、安装与优化 | writing-for-agents |
+| [其他/专业场景](scenarios/specialized.md) | meta：skill 创建、安装与优化 | skill-creator · writing-for-agents |
 
 > 场景的 `skills:` 按具体 skill 列出；合集条目（如 `mattpocock-skills`、`awesome-gamedev-agent-skills`）要展开成实际用到的子 skill，不写合集名本身。`grilling` 适用于所有场景。
 
