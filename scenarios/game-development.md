@@ -1,6 +1,6 @@
 ---
 title: 游戏开发
-skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, create-game-assets, threejs-game-director, threejs-gameplay-systems, threejs-aaa-graphics-builder, threejs-game-ui-designer, threejs-qa-release, vitest, grilling]
+skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, create-game-assets, canvas-design, threejs-game-director, threejs-gameplay-systems, threejs-aaa-graphics-builder, threejs-game-ui-designer, threejs-qa-release, vitest, grilling]
 ---
 
 # 游戏开发
@@ -25,6 +25,7 @@ skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, cre
 - 非 Three.js 引擎的 HUD 与菜单：用 `game-ui-ux` 或对应引擎的 UI 子 skill。
 - 已有现成 GLB 资产：用 `threejs-gltf-loading` 直接加载，不必走生成。
 - 需要生成 3D 资产：`threejs-3d-generator` 已从本目录移除（依赖付费 Tripo API）；回上游使用，或按 `create-game-assets` 规划后接外部生成服务。
+- 需要封面、宣传海报或商店页主视觉：用 `canvas-design` 先定一套设计哲学，再直出 PNG / PDF；产出是静态视觉作品，不进入游戏内资产管线。
 - 需要静态部署：按 `threejs-qa-release` 的生产构建与静态托管步骤处理。
 - 需要单元测试：用 `vitest`（见开发）。
 - 玩法、范围或目标平台不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。
@@ -33,5 +34,6 @@ skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, cre
 
 - 先打开合集条目的子 skill 表，不要凭名字猜用途。
 - 上游 Three.js 系列共 9 个 skill，本目录只保留 5 个代表条目；资产生成类不单独收录，需要时回上游查阅。
+- `canvas-design` 只负责封面、海报与主视觉这类静态视觉成品；游戏内 HUD、菜单与图标仍走 `threejs-game-ui-designer` 与 `create-game-assets`。
 - 不要混用 Three.js 与 Godot / Unity 的资产管线。
 - WebGL 移动端先定性能预算，再决定是否上后处理。

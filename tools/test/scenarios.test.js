@@ -36,7 +36,7 @@ test('scenario counts resolve completely', () => {
     'video-production': 11,
     general: 12,
     'product-prototype': 11,
-    'game-development': 13,
+    'game-development': 14,
     specialized: 3
   };
   for (const [name, count] of Object.entries(expectations)) {
