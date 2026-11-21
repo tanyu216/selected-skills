@@ -38,6 +38,7 @@ selected-skills/
 | frontend | [finesse-term](skills/frontend/finesse-term.md) | 把用户口语化的 Web / H5 描述翻译成准确术语和可执行需求。 | [Finesse Term](https://github.com/mouse-lin/finesse-term) |
 | frontend | [finesse-ui](skills/frontend/finesse-ui.md) | 构建和打磨高完成度 Web 界面，含视觉、无障碍与动效审计。 | [Finesse UI](https://github.com/mouse-lin/finesse-skill) |
 | frontend | [interface-design](skills/frontend/interface-design.md) | 面向仪表盘、后台、SaaS 工具与数据界面的 craft-first 设计。 | [Interface Design](https://github.com/Dammyjay93/interface-design) |
+| frontend | [modern-web-guidance](skills/frontend/modern-web-guidance.md) | 可检索的现代 Web 平台指南：先查写法与 Baseline 回退，再写 HTML / CSS / 客户端 JS。 | [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance-src) |
 | frontend | [nuxt](skills/frontend/nuxt.md) | Nuxt 全栈框架的 SSR、自动导入、文件路由与服务端路由用法。 | [Nuxt](https://github.com/antfu/skills) |
 | frontend | [vue](skills/frontend/vue.md) | Vue 3 Composition API、script setup、响应式与内置组件的写法约定。 | [Vue](https://github.com/antfu/skills) |
 | engineering | [antfu](skills/engineering/antfu.md) | Anthony Fu 的 JavaScript / TypeScript 项目工具链、代码组织与发布约定。 | [Antfu](https://github.com/antfu/skills) |
@@ -98,7 +99,7 @@ selected-skills/
 | --- | --- | --- |
 | [通用场景（文档处理、搜索）](scenarios/general.md) | 交付办公文档，或带引用的调研结论 | pdf · docx · pptx · xlsx · tavily-search · tavily-research |
 | [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可直接进入实现的设计交付物 | grilling · finesse-term · brand · canvas-design · design-taste-frontend/interface-design · design-system · finesse-ui · prototype · playwright-cli |
-| [前端开发](scenarios/frontend-development.md) | 按设计交付物落地的工程实现与测试 | vue/nuxt · vite · daisyui · vitest · playwright-cli |
+| [前端开发](scenarios/frontend-development.md) | 按设计交付物落地的工程实现与测试 | modern-web-guidance · vue/nuxt · vite · daisyui · vitest · playwright-cli |
 | [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement/implement-spec · vitest · open-code-review |
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
 | [视频制作](scenarios/video-production.md) | 可交付的成片或竖屏短视频 | hyperframes · remotion · frame-smith · media-use · video-use |

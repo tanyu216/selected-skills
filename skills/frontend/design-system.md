@@ -25,7 +25,7 @@ summary: 三层 design token、组件规范与品牌一致性的系统化设计�
 
 ## 注意点
 
-三层 token 的命名一旦发布就应保持稳定，改语义层比改组件层代价低。
+三层 token 的命名一旦发布就应保持稳定，改语义层比改组件层代价低。与 `modern-web-guidance` 分工：token 分层与命名归本 skill；token 的响应式与主题实现细节可查它的 `design-token-reactivity`、`responsive-design` 指南。
 
 ## 来源
 

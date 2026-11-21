@@ -1,6 +1,6 @@
 ---
 title: 前端开发
-skills: [vue, nuxt, vite, daisyui, vitest, playwright-cli]
+skills: [modern-web-guidance, vue, nuxt, vite, daisyui, vitest, playwright-cli]
 ---
 
 # 前端开发
@@ -16,15 +16,17 @@ skills: [vue, nuxt, vite, daisyui, vitest, playwright-cli]
 ## 推荐组合与顺序
 
 1. 读取设计交付物 —— token、组件规范、页面方向、状态清单与截图；缺规格时先回产品原型设计。
-2. `vue` 或 `nuxt` —— 按框架约定实现；Nuxt 额外处理 SSR、服务端路由与 `useFetch`。
-3. `vite` —— 只在改构建配置、插件、SSR 或做 Vite 8 迁移时介入。
-4. `daisyui` —— 组件与样式落地，优先语义色与既有 token；不要自行引入第二套组件库。
-5. `vitest` —— 为组件与交互补单元/集成测试，处理 mock 与覆盖率。
-6. `playwright-cli` —— 真浏览器 E2E、关键路径回归与响应式验证。
+2. `modern-web-guidance` —— 写任何 HTML、CSS 或客户端 JS 前先 `search` / `retrieve`，拿到平台写法、Baseline 状态与回退策略；组件库已有约定时以项目约定为准。
+3. `vue` 或 `nuxt` —— 按框架约定实现；Nuxt 额外处理 SSR、服务端路由与 `useFetch`。
+4. `vite` —— 只在改构建配置、插件、SSR 或做 Vite 8 迁移时介入。
+5. `daisyui` —— 组件与样式落地，优先语义色与既有 token；不要自行引入第二套组件库。
+6. `vitest` —— 为组件与交互补单元/集成测试，处理 mock 与覆盖率。
+7. `playwright-cli` —— 真浏览器 E2E、关键路径回归与响应式验证。
 
 ## 分支与替代
 
 - 只做组件与样式落地：直接用 `daisyui`，但仍以设计 token 为准。
+- 只做平台 API、兼容性、CWV 或无障碍实现问题：直接用 `modern-web-guidance`，不必走完整前端流程。
 - 从页面原型进入实现：先按产品原型设计定方向与 token，再用本场景落地。
 - 只做视觉、无障碍或动效审查：回到产品原型设计，用 `finesse-ui`。
 - 需求、范围或验收标准不清：用 `grilling`（见开发）。
@@ -36,6 +38,8 @@ skills: [vue, nuxt, vite, daisyui, vitest, playwright-cli]
 
 - 本场景不包含视觉方向、token 设计与视觉打磨；这些统一见产品原型设计。
 - daisyUI 5 依赖 Tailwind CSS 4；版本不匹配时类名会静默失效。
+- 组件选择服从项目约定（如 daisyUI）；`modern-web-guidance` 只补平台行为、无障碍与回退细节，不替换组件库。
+- `modern-web-guidance` 的触发面很宽；与设计类 skill 同时启用时，由设计侧定方向，它只管平台写法与兼容性。
 - 设计 token 是契约；不要在前端开发里新增语义色或改 token 命名。
 - 无障碍：设计侧定义要求，本场景负责语义 HTML、键盘、焦点与 ARIA 实现。
 - 响应式：设计侧定义断点与布局行为，本场景负责实现。

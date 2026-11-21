@@ -258,6 +258,7 @@
     "manim-video": ["uv tool install manim", "安装 ffmpeg", "安装 LaTeX（macOS：brew install --cask mactex-no-gui 或 brew install tectonic）"],
     "video-use": ["安装 ffmpeg", "配置 ElevenLabs key", "上游 install.md 只打印，不自动执行"],
     "video-downloader": ["按上游 README/脚本提示安装额外依赖"],
+    "modern-web-guidance": ["需要 Node.js 22+", "首次检索会通过 npx 下载 modern-web-guidance（需联网）", "只放行 npx -y modern-web-guidance@latest *，不要放行裸 npx *"],
     "docx": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
     "pdf": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
     "pptx": ["检测 skill 目录内的 requirements.txt / package.json，按需安装"],
