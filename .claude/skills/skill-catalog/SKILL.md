@@ -30,7 +30,7 @@ SKILL_DIR=.claude/skills/skill-catalog
 node "$SKILL_DIR/scripts/upstream.mjs" clone <url|owner/repo>
 ```
 
-副本落在 `.github-clones/<owner>/<repo>`，默认浅克隆，已自动加入 `.git/info/exclude`。已存在就 `update`。需要历史或旧版本对照时才用 `--full`。`list` 查看现有副本，`remove` 清理；删脏副本会要求 `--force`，先向用户确认。
+副本落在 `.github-clones/<owner>/<repo>`，默认浅克隆；仓库根的 `.gitignore` 已忽略该目录，脚本在未忽略它的仓库里会回退写入 `.git/info/exclude`。已存在就 `update`。需要历史或旧版本对照时才用 `--full`。`list` 查看现有副本，`remove` 清理；删脏副本会要求 `--force`，先向用户确认。
 
 ### 2. 盘点真实内容
 
