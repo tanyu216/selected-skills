@@ -1,6 +1,6 @@
 ---
 title: 游戏开发
-skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, create-game-assets, canvas-design, threejs-game-director, threejs-gameplay-systems, threejs-aaa-graphics-builder, threejs-game-ui-designer, threejs-qa-release, vitest, grilling]
+skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, create-game-assets, canvas-design, pixelfx, threejs-game-director, threejs-gameplay-systems, threejs-aaa-graphics-builder, threejs-game-ui-designer, threejs-qa-release, vitest, grilling]
 ---
 
 # 游戏开发
@@ -26,6 +26,7 @@ skills: [router, game-jam, prototype-fast, game-ui-ux, threejs-gltf-loading, cre
 - 已有现成 GLB 资产：用 `threejs-gltf-loading` 直接加载，不必走生成。
 - 需要生成 3D 资产：`threejs-3d-generator` 已从本目录移除（依赖付费 Tripo API）；回上游使用，或按 `create-game-assets` 规划后接外部生成服务。
 - 需要封面、宣传海报或商店页主视觉：用 `canvas-design` 先定一套设计哲学，再直出 PNG / PDF；产出是静态视觉作品，不进入游戏内资产管线。
+- 像素风 2D 特效（攻击命中、法术、天气、UI 反馈、拾取、转场）：用 `pixelfx` 先搜现有效果并调 `palette` / `seed`；浏览器游戏直接引代码，Godot / Unity 等引擎导出精灵表接入。它不覆盖 3D 特效与材质。
 - 需要静态部署：按 `threejs-qa-release` 的生产构建与静态托管步骤处理。
 - 需要单元测试：用 `vitest`（见开发）。
 - 玩法、范围或目标平台不清：用 `mattpocock-skills` 的 `grilling` 做压力测试（主流程见开发）。

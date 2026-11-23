@@ -78,6 +78,7 @@ selected-skills/
 | creative | [video-downloader](skills/creative/video-downloader.md) | 下载或打开多平台视频，并生成带时间戳的多模态转写稿。 | [Video Downloader](https://github.com/kangarooking/kangarooking-skills/tree/main/video-downloader) |
 | creative | [video-use](skills/creative/video-use.md) | 通过对话剪辑视频：转写、剪切、调色、字幕与叠加动画。 | [Video Use](https://github.com/browser-use/video-use) |
 | gamedev | [awesome-gamedev-agent-skills](skills/gamedev/awesome-gamedev-agent-skills.md) | 78 个游戏开发 skill 的合集：学科、类型、引擎与发布流程。 | [Awesome GameDev Agent Skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) |
+| gamedev | [pixelfx](skills/gamedev/pixelfx.md) | 用代码生成像素风特效与精灵动画：244 个现成效果，可接入浏览器游戏或导出精灵表给任意引擎。 | [pixelfx](https://github.com/patch-gg/pixelfx) |
 | gamedev | [threejs-aaa-graphics-builder](skills/gamedev/threejs-aaa-graphics-builder.md) | 把 Three.js 原型画面升级为高级浏览器图形：材质、着色器、VFX、光照与 LOD。 | [Three.js AAA Graphics Builder](https://github.com/majidmanzarpour/threejs-game-skills) |
 | gamedev | [threejs-game-director](skills/gamedev/threejs-game-director.md) | Three.js 浏览器游戏的入口，把工作路由到玩法、美术、UI、资产、调试与发布。 | [Three.js Game Director](https://github.com/majidmanzarpour/threejs-game-skills) |
 | gamedev | [threejs-game-ui-designer](skills/gamedev/threejs-game-ui-designer.md) | 为 Three.js 浏览器游戏设计 HUD、菜单与覆盖层的布局与状态。 | [Three.js Game UI Designer](https://github.com/majidmanzarpour/threejs-game-skills) |
