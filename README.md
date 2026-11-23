@@ -100,7 +100,7 @@ selected-skills/
 | --- | --- | --- |
 | [通用场景（文档处理、搜索）](scenarios/general.md) | 交付办公文档，或带引用的调研结论 | pdf · docx · pptx · xlsx · tavily-search · tavily-research |
 | [产品原型设计（网页设计）](scenarios/product-prototype.md) | 可评审、可直接进入实现的设计交付物 | grilling · finesse-term · brand · canvas-design · design-taste-frontend/interface-design · design-system · finesse-ui · prototype · playwright-cli |
-| [前端开发](scenarios/frontend-development.md) | 按设计交付物落地的工程实现与测试 | modern-web-guidance · vue/nuxt · vite · daisyui · vitest · playwright-cli |
+| [前端开发](scenarios/frontend-development.md) | 按设计交付物落地的工程实现、打磨与测试 | modern-web-guidance · vue/nuxt · vite · daisyui · finesse-ui · vitest · playwright-cli |
 | [开发](scenarios/development.md) | 可构建、可测试、可审查合并的 Web 改动 | antfu · gitnexus · to-spec · to-tickets · implement/implement-spec · vitest · open-code-review |
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
 | [视频制作](scenarios/video-production.md) | 可交付的成片或竖屏短视频 | hyperframes · remotion · frame-smith · media-use · video-use |

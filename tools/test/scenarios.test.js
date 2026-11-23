@@ -30,7 +30,7 @@ test('scenario counts resolve completely', () => {
   const expectations = {
     'data-analysis': 18,
     quant: 20,
-    'frontend-development': 7,
+    'frontend-development': 8,
     development: 17,
     'agent-workflow': 13,
     'video-production': 11,
