@@ -60,7 +60,7 @@ selected-skills/
 | data | [scikit-learn](skills/data/scikit-learn.md) | 监督与无监督学习、模型评估、调参与 Pipeline。 | [K-Dense Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills) |
 | data | [statsmodels](skills/data/statsmodels.md) | OLS / GLM / 离散与混合模型、ARIMA / SARIMAX 的拟合与推断。 | [K-Dense Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills) |
 | quant | [alphalens-reloaded](skills/quant/alphalens-reloaded.md) | 因子绩效分析：IC/IR、分位收益、换手与分组分析。 | [Alphalens Reloaded](https://github.com/stefan-jansen/alphalens-reloaded) |
-| quant | [claude-trading-skills](skills/quant/claude-trading-skills.md) | 74 个交易与投资流程 skill 的合集：市场状态、组合、选股、交易计划、复盘与策略研究。 | [Claude Trading Skills](https://github.com/tradermonty/claude-trading-skills) |
+| quant | [claude-trading-skills](skills/quant/claude-trading-skills.md) | 74 个交易与投资流程 skill 的合集：市场状态、组合、选股、交易计划、复盘与策略研究，含无需 API key 的 edge 研究流水线。 | [Claude Trading Skills](https://github.com/tradermonty/claude-trading-skills) |
 | quant | [optuna](skills/quant/optuna.md) | 超参数优化：define-by-run 搜索空间、剪枝、并行与试验管理。 | [Optuna](https://github.com/optuna/optuna) |
 | quant | [qlib](skills/quant/qlib.md) | 面向 AI 的量化投资框架：数据、因子、模型、回测、组合优化与自动研究流水线。 | [Qlib](https://github.com/microsoft/qlib) |
 | quant | [tradingagents](skills/quant/tradingagents.md) | 多 Agent LLM 交易研究框架：分析师、研究员、交易员、风控与组合经理协作决策。 | [TradingAgents](https://github.com/TauricResearch/TradingAgents) |
@@ -105,7 +105,7 @@ selected-skills/
 | [游戏开发](scenarios/game-development.md) | 可玩、可部署的浏览器游戏 | router · threejs-game-director · threejs-gameplay-systems · threejs-qa-release |
 | [视频制作](scenarios/video-production.md) | 可交付的成片或竖屏短视频 | hyperframes · remotion · frame-smith · media-use · video-use |
 | [数据分析（清洗、统计、可视化）](scenarios/data-analysis.md) | 数据清洗、统计分析、可视化与交付校验 | tavily-search · tavily-research · xlsx · polars · exploratory-data-analysis · statistical-analysis · data-visualization |
-| [量化研究（因子、回测、交易流程）](scenarios/quant.md) | 因子研究、策略回测、组合与交易流程 | qlib · alphalens-reloaded · optuna · backtest-expert · manifoldbt-backtester · tradingagents · trading-skills-navigator · vcp-screener |
+| [量化研究（因子、回测、交易流程）](scenarios/quant.md) | 因子研究、策略回测、组合与交易流程 | qlib · alphalens-reloaded · optuna · backtest-expert · manifoldbt-backtester · tradingagents · trading-skills-navigator · vcp-screener · edge-pipeline-orchestrator · residual-edge-analyzer |
 | [智能体场景（任务看板、工作流）](scenarios/agent-workflow.md) | 智能体协作、任务看板与交接 | setup-meerkat · meerkat · jobs/linus/turing · reviewer · meerkat-chat · handoff |
 | [其他/专业场景](scenarios/specialized.md) | meta：skill 创建、安装与优化 | skill-creator · writing-for-agents |
 

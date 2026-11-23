@@ -1,6 +1,6 @@
 ---
 title: 量化研究场景（因子、回测、交易流程）
-skills: [qlib, backtest-expert, manifoldbt-backtester, alphalens-reloaded, optuna, tradingagents, trading-skills-navigator, market-breadth-analyzer, uptrend-analyzer, exposure-coach, vcp-screener, technical-analyst, position-sizer, pre-trade-discipline-gate, trader-memory-core, signal-postmortem, data-quality-checker, polars, xlsx, exploratory-data-analysis, statistical-analysis, statsmodels, scikit-learn, grilling]
+skills: [qlib, backtest-expert, manifoldbt-backtester, alphalens-reloaded, optuna, tradingagents, trading-skills-navigator, market-breadth-analyzer, uptrend-analyzer, exposure-coach, vcp-screener, technical-analyst, position-sizer, pre-trade-discipline-gate, trader-memory-core, signal-postmortem, data-quality-checker, edge-hint-extractor, edge-candidate-agent, edge-concept-synthesizer, edge-strategy-designer, edge-strategy-reviewer, edge-pipeline-orchestrator, edge-signal-aggregator, residual-edge-analyzer, strategy-pivot-designer, trade-hypothesis-ideator, polars, xlsx, exploratory-data-analysis, statistical-analysis, statsmodels, scikit-learn, grilling]
 ---
 
 # 量化研究场景（因子、回测、交易流程）
@@ -19,9 +19,10 @@ skills: [qlib, backtest-expert, manifoldbt-backtester, alphalens-reloaded, optun
 6. `qlib` —— 需要端到端量化流水线时，用 Qlib 建数据、因子、模型训练与 `qrun` 回测评估。
 7. `alphalens-reloaded` —— 在回测前做因子体检：IC / IR、分位收益、换手率与行业分组。
 8. `backtest-expert` —— 对策略做压力测试、参数稳健性、滑点与偏差审查；声明式回测接 `manifoldbt-backtester`。
-9. `tradingagents` —— 需要对最终候选做独立第二意见或投委会式评审时，按标的与决策日期跑多角色分析；只作为软否决或降仓依据，不替代回测。
-10. `trading-skills-navigator` —— 需要具体交易流程时，先在 `claude-trading-skills` 里选工作流，再按需接 `market-breadth-analyzer` / `uptrend-analyzer` / `exposure-coach`、`vcp-screener`、`technical-analyst`、`position-sizer`、`pre-trade-discipline-gate`、`trader-memory-core`、`signal-postmortem`。
-11. `data-quality-checker` —— 交付前校验数据、结论与文档的一致性。
+9. `edge-pipeline-orchestrator` —— 走上游 `strategy-research-pipeline`（`no-api-basic`）的离线研究闭环：`edge-candidate-agent` 出初始票据 → `edge-hint-extractor` 抽 `hints.yaml` → 带 hints 且用同一份 OHLCV 与 as-of 日期复检 → `edge-concept-synthesizer` → `edge-strategy-designer` → `edge-strategy-reviewer`；`edge-pipeline-orchestrator` 可一条命令跑完。回测后用 `residual-edge-analyzer` 把收益拆成基准暴露与残差 alpha，用 `strategy-pivot-designer` 判断是否结构性转向，多来源信号用 `edge-signal-aggregator` 排序；`trade-hypothesis-ideator` 可从交易日志补可证伪假设。
+10. `tradingagents` —— 需要对最终候选做独立第二意见或投委会式评审时，按标的与决策日期跑多角色分析；只作为软否决或降仓依据，不替代回测。
+11. `trading-skills-navigator` —— 需要具体交易流程时，先在 `claude-trading-skills` 里选工作流，再按需接 `market-breadth-analyzer` / `uptrend-analyzer` / `exposure-coach`、`vcp-screener`、`technical-analyst`、`position-sizer`、`pre-trade-discipline-gate`、`trader-memory-core`、`signal-postmortem`。
+12. `data-quality-checker` —— 交付前校验数据、结论与文档的一致性。
 
 ## 分支与替代
 
@@ -31,6 +32,9 @@ skills: [qlib, backtest-expert, manifoldbt-backtester, alphalens-reloaded, optun
 - 只想调模型超参：用 `optuna`，目标函数接现有的训练与验证流程即可。
 - 要对最终候选做基本面 / 新闻 / 情绪复核：用 `tradingagents` 离线批量评审；它不读策略代码，只按标的与日期给第二意见。
 - 只验证已有策略：用 `backtest-expert` 做稳健性审查，或用 `manifoldbt-backtester` 跑声明式回测。
+- 只有盘面观察、没有完整想法：先用 `edge-candidate-agent` 从本地 OHLCV 出初始票据，再用 `edge-hint-extractor` 把观察与新闻反应整理成可证伪的线索，或用 `trade-hypothesis-ideator` 从交易日志补假设；不要跳过线索直接写策略。
+- 回测指标不全：上游研究流水线要求 total-trades、win-rate、avg-win-pct、avg-loss-pct、max-drawdown-pct、years-tested、num-parameters 齐全且能对应到同一张票据，缺项一律 HOLD；研究票据与评估留在本地，不自动进入实盘。
+- 需要选股或事件研究素材：按需加 `pair-trade-screener`、`stockbee-20pct-study`、`macro-regime-detector`、`us-undervalued-growth-screener`、`breakout-trade-planner`、`stockbee-momentum-burst-screener`、`stockbee-exhaustion-hammer-screener`、`stockbee-episodic-pivot-analyzer`、`ftd-detector`、`ibd-distribution-day-monitor`、`market-top-detector`、`theme-detector`、`sector-analyst`、`institutional-flow-tracker`；多数需要 FMP，`macro-regime-detector` 可用 yfinance 兜底。
 - 因子归因与 IC/IR：用 `qlib` 的因子与模型评估；需要更细的因子分析时接上游 `alphalens` 等库。
 - 实盘交易流程（市场状态、选股、仓位与复盘）：用 `claude-trading-skills` 合集，先跑 `trading-skills-navigator`；多数子 skill 依赖 FMP / FINVIZ / Alpaca 等外部数据与账户。
 - 高频、tick 级或实盘执行：不在本场景范围；Qlib 与回测 skill 只服务研究，不接券商下单。

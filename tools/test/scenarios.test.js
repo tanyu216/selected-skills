@@ -18,9 +18,9 @@ test('there are ten scenarios with skill lists', () => {
   for (const scenario of scenarios) assert.ok(scenario.skills.length > 0, `${scenario.slug} has no skills`);
 });
 
-test('--all selects 104 skills and 6 frameworks, no unresolved items', () => {
+test('--all selects 128 skills and 6 frameworks, no unresolved items', () => {
   const result = selection({ all: true });
-  assert.equal(result.selected.filter((spec) => spec.kind === 'skill').length, 104);
+  assert.equal(result.selected.filter((spec) => spec.kind === 'skill').length, 128);
   assert.equal(result.selected.filter((spec) => spec.kind === 'framework').length, 6);
   assert.equal(result.unresolved.length, 0);
   assert.equal(result.selected.filter((spec) => spec.kind === 'collection').length, 0);
@@ -29,7 +29,7 @@ test('--all selects 104 skills and 6 frameworks, no unresolved items', () => {
 test('scenario counts resolve completely', () => {
   const expectations = {
     'data-analysis': 18,
-    quant: 20,
+    quant: 30,
     'frontend-development': 8,
     development: 17,
     'agent-workflow': 13,

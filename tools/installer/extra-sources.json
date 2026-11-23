@@ -66,6 +66,32 @@
     "pre-trade-discipline-gate": { "repo": "tradermonty/claude-trading-skills", "path": "skills/pre-trade-discipline-gate" },
     "trader-memory-core": { "repo": "tradermonty/claude-trading-skills", "path": "skills/trader-memory-core" },
     "signal-postmortem": { "repo": "tradermonty/claude-trading-skills", "path": "skills/signal-postmortem" },
-    "data-quality-checker": { "repo": "tradermonty/claude-trading-skills", "path": "skills/data-quality-checker" }
+    "data-quality-checker": { "repo": "tradermonty/claude-trading-skills", "path": "skills/data-quality-checker" },
+
+    "edge-hint-extractor": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-hint-extractor" },
+    "edge-candidate-agent": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-candidate-agent" },
+    "edge-concept-synthesizer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-concept-synthesizer" },
+    "edge-strategy-designer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-strategy-designer" },
+    "edge-strategy-reviewer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-strategy-reviewer" },
+    "edge-signal-aggregator": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-signal-aggregator" },
+    "edge-pipeline-orchestrator": { "repo": "tradermonty/claude-trading-skills", "path": "skills/edge-pipeline-orchestrator" },
+    "residual-edge-analyzer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/residual-edge-analyzer" },
+    "strategy-pivot-designer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/strategy-pivot-designer" },
+    "trade-hypothesis-ideator": { "repo": "tradermonty/claude-trading-skills", "path": "skills/trade-hypothesis-ideator" },
+
+    "pair-trade-screener": { "repo": "tradermonty/claude-trading-skills", "path": "skills/pair-trade-screener" },
+    "stockbee-20pct-study": { "repo": "tradermonty/claude-trading-skills", "path": "skills/stockbee-20pct-study" },
+    "macro-regime-detector": { "repo": "tradermonty/claude-trading-skills", "path": "skills/macro-regime-detector" },
+    "us-undervalued-growth-screener": { "repo": "tradermonty/claude-trading-skills", "path": "skills/us-undervalued-growth-screener" },
+    "breakout-trade-planner": { "repo": "tradermonty/claude-trading-skills", "path": "skills/breakout-trade-planner" },
+    "stockbee-momentum-burst-screener": { "repo": "tradermonty/claude-trading-skills", "path": "skills/stockbee-momentum-burst-screener" },
+    "stockbee-exhaustion-hammer-screener": { "repo": "tradermonty/claude-trading-skills", "path": "skills/stockbee-exhaustion-hammer-screener" },
+    "stockbee-episodic-pivot-analyzer": { "repo": "tradermonty/claude-trading-skills", "path": "skills/stockbee-episodic-pivot-analyzer" },
+    "ftd-detector": { "repo": "tradermonty/claude-trading-skills", "path": "skills/ftd-detector" },
+    "ibd-distribution-day-monitor": { "repo": "tradermonty/claude-trading-skills", "path": "skills/ibd-distribution-day-monitor" },
+    "market-top-detector": { "repo": "tradermonty/claude-trading-skills", "path": "skills/market-top-detector" },
+    "theme-detector": { "repo": "tradermonty/claude-trading-skills", "path": "skills/theme-detector" },
+    "sector-analyst": { "repo": "tradermonty/claude-trading-skills", "path": "skills/sector-analyst" },
+    "institutional-flow-tracker": { "repo": "tradermonty/claude-trading-skills", "path": "skills/institutional-flow-tracker" }
   }
 }
